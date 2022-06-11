@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+/*************** CUSTOM PROPERTIES ***************/
+
+:root {
+    --ff-sans: 'Overpass', sans-serif;
+
+    --fw-normal: 400;
+    --fw-normal: 700;
+
+    --fs-700: 2.5rem;
+    --fs-600: 2.25rem;
+    --fs-500: 2rem;
+    --fs-400: 1.5rem;
+    
+    --primary-orange: 25, 97%, 53%;
+
+    --text-white: 0, 0%, 100%;
+    --text-grey: 217, 12%, 63%;
+    --bg-grey: 216, 12%, 54%;
+    --bg-blue: 213, 19%, 18%;
+    --bg-dark-blue: 216, 12%, 8%;
+}
+
+/********************* RESET *********************/
+
+/******** BOX SIZING ********/
+
+*::before,
+*,
+*::after {
+    box-sizing: border-box;
+}
+
+/********** MARGIN **********/
+
+body,
+h1,h2,h3,
+h4,h5,h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,h2,h3,
+h4,h5,h6,
+p {
+    font-weight: var(--fw-normal);
+}
+
+/*********** BODY ***********/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: var(--ff-sans);
+    font-size: var(--fs-400);
+    color: hsl(var(--text-white));
+    background-color: hsl(var(--bg-dark-blue));
+    line-height: 1.5;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows:  1fr;
+}
+
+/*********** FORM ***********/
+
+input,
+button {
+    font: inherit;
+    border: none;
+}
+
+
+/**** CANCEL  ANIMATIONS ****/
+
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+
+
+/*************************************************/
+/**************** UTILITY CLASSES ****************/
+/*************************************************/
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+
+.flow-spaced > * + * {
+    margin-top: 3rem;
+}
+
+.flow-normal > * + * {
+    margin-top: 2rem;
+}
+
+.flow-stretch > * + * {
+    margin-top: 1rem;
+}
+
+.container {
+    padding: 3rem 3rem;
+    border-radius: 3rem;
+    max-width: 375px;
+}
+
+/********************* COLORS ********************/
+
+.text-orange {color: hsl(var(--primary-orange));}
+.text-white {color: hsl(var(--text-white));}
+.text-grey {color: hsl(var(--text-grey));}
+
+.bg-orange {background-color: hsl(var(--primary-orange));}
+.bg-grey {background-color: hsl(var(--bg-grey));}
+.bg-blue {background-color: hsl(var(--bg-blue));} 
+.bg-dark-blue {background-color: hsl(var(--bg-dark-blue));} 
+
+/******************* TYPOGRAPHY ******************/
+
+.ff-sans {font-family: var(--ff-sans);}
+
+.fs-700 {font-size: var(--fs-700);}
+.fs-600 {font-size: var(--fs-600);}
+.fs-500 {font-size: var(--fs-500);}
+.fs-400 {font-size: var(--fs-400);}
+
+.uppercase {text-transform: uppercase;}
+
+/******************* COMPONENTS ******************/
+
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+.container-rating .star {
+    width: 50px;
+    height: 50px;
+    background-color: hsl(var(--bg-grey) , .2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+
+.container-rating .rating-buttons {
+    justify-content: space-between;
+}
+
+.rating-buttons button {
+    background-color: hsl(var(--bg-grey) , 0.2);
+    color: hsl(var(--text-grey));
+    padding: 0 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+}
+
+.rating-buttons > *:hover,
+.rating-buttons > *:focus {
+    background-color: hsl(var(--primary-orange));
+    color: hsl(var(--text-white));
+}
+
+.rating-buttons > [aria-selected="true"] {
+    background-color: hsl(var(--bg-grey));
+    color: hsl(var(--text-white));
+}
+
+.call-to-act {
+    padding-block: 1.5rem;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.call-to-act:hover,
+.call-to-act:focus {
+    color: hsl(var(--primary-orange));
+    background-color: hsl(var(--text-white));
+}
+
+
+
+
+
+@media (min-size: 45em) {
+    body {
+        max-width: 1440px;
+    }
+}
