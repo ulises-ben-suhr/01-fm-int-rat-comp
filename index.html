@@ -16,21 +16,28 @@
 
     <div class="star"><img src="/images/icon-star.svg" alt="star"></div>
 
-    <h1>How did we do?</h1>
+    <h1 class="fw-thick">How did we do?</h1>
 
     <p class="text-grey">
       Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
     </p>
 
-    <div class="rating-buttons flex">
-      <button role="option" aria-selected="false">1</button>
-      <button role="option" aria-selected="false">2</button>
-      <button role="option" aria-selected="false">3</button>
-      <button role="option" aria-selected="false">4</button>
-      <button role="option" aria-selected="false">5</button>
-    </div>
+    <form action="" class="principal-form flow-spaced" id="calif">
+      <div class="rating-buttons flex">
+        <input type="radio" name="calification" id="one" required>
+        <label for="one">1</label>
+        <input type="radio" name="calification" id="two">
+        <label for="two">2</label>
+        <input type="radio" name="calification" id="three">
+        <label for="three">3</label>
+        <input type="radio" name="calification" id="four">
+        <label for="four">4</label>
+        <input type="radio" name="calification" id="five">
+        <label for="five">5</label>
+      </div>
 
-    <input type="submit" value="Submit" class="call-to-act text-white bg-orange uppercase d-block">
+      <input type="submit" value="Submit" class="call-to-act text-white fw-thick bg-orange uppercase d-block">
+    </form>
 
   </main> 
 

@@ -7,7 +7,7 @@
     --ff-sans: 'Overpass', sans-serif;
 
     --fw-normal: 400;
-    --fw-normal: 700;
+    --fw-bold: 700;
 
     --fs-700: 2.5rem;
     --fs-600: 2.25rem;
@@ -149,6 +149,8 @@ button {
 .fs-500 {font-size: var(--fs-500);}
 .fs-400 {font-size: var(--fs-400);}
 
+.fw-thick {font-weight: var(--fw-bold);}
+
 .uppercase {text-transform: uppercase;}
 
 /******************* COMPONENTS ******************/
@@ -167,12 +169,15 @@ body {
     place-items: center;
 }
 
-
-.container-rating .rating-buttons {
+.rating-buttons {
     justify-content: space-between;
 }
 
-.rating-buttons button {
+.rating-buttons > [type="radio"] {
+    display: none;
+}
+
+.rating-buttons label {
     background-color: hsl(var(--bg-grey) , 0.2);
     color: hsl(var(--text-grey));
     padding: 0 2rem;
@@ -189,7 +194,7 @@ body {
     color: hsl(var(--text-white));
 }
 
-.rating-buttons > [aria-selected="true"] {
+.rating-buttons input:checked + label {
     background-color: hsl(var(--bg-grey));
     color: hsl(var(--text-white));
 }
