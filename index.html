@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <main class="container container-rating bg-blue flow-spaced" id="rating">
+  <main class="container container-rating bg-blue flow-spaced d-block" id="rating">
 
     <div class="star"><img src="/images/icon-star.svg" alt="star"></div>
 
@@ -22,31 +22,35 @@
       Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
     </p>
 
-    <form action="" class="principal-form flow-spaced" id="calif">
+    <div class="principal-form flow-spaced" id="calif">
       <div class="rating-buttons flex">
-        <input type="radio" name="calification" id="one" required>
+        <input type="radio" name="calification" value="1" id="one" required>
         <label for="one">1</label>
-        <input type="radio" name="calification" id="two">
+        <input type="radio" name="calification" value="2" id="two">
         <label for="two">2</label>
-        <input type="radio" name="calification" id="three">
+        <input type="radio" name="calification" value="3" id="three">
         <label for="three">3</label>
-        <input type="radio" name="calification" id="four">
+        <input type="radio" name="calification" value="4" id="four">
         <label for="four">4</label>
-        <input type="radio" name="calification" id="five">
+        <input type="radio" name="calification" value="5" id="five">
         <label for="five">5</label>
       </div>
 
-      <input type="submit" value="Submit" class="call-to-act text-white fw-thick bg-orange uppercase d-block">
-    </form>
+      <button class="call-to-act text-white fw-thick bg-orange uppercase d-block">Submit</button>
+    </div>
 
   </main> 
 
-  <main hidden class="container bg-blue" id="thanks">
+  <main class="container bg-blue flow-spaced d-none" id="thanks">
 
-    <img src="/images/illustration-thank-you.svg" alt="">
+    <div class="flex" style="justify-content: space-between;">
+      <img src="/images/illustration-thank-you.svg" alt="thanks">
+
+      <a class="star" href=""><img src="/images/icon-star.svg" alt="star"></a>
+    </div>
 
     <p>
-      You selected <!-- Add rating here --> out of 5
+      You selected <span id="rating-value"></span> out of 5
     </p>
 
     <h1>Thank you!</h1>
@@ -57,13 +61,10 @@
 
   </main>
 
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">La Sudestada</a>.
+    Coded by <a href="#">Your Name Here</a>.
   </div>
-
-
 
   <script src="funcion.js"></script>
 </body>
